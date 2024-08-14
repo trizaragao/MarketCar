@@ -93,6 +93,7 @@ return (
     
        
         {cursos.map(curso =>(<li>
+            <li key={curso.id}/>
             <h2>{curso.titulo}</h2>
             <p>{curso.desc}</p>
             <p>R${formatarPreco(curso.preco)}</p>
@@ -106,6 +107,7 @@ return (
      <h2>Carrinho de Compras R${formatarPreco(totalCurso)}</h2>
     <ul className='CarrinhodeCompras'>
         {shoppingCurso.map((item)=>(<li>
+            <li key={item.produto.id}/>
             <h2>{item.produto.titulo}</h2>
             <p>{item.produto.desc}</p>
             <p>R${formatarPreco(item.produto.preco)}</p>
